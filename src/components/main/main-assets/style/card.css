@@ -1,16 +1,18 @@
-.images-container {
-    display: grid;
-    grid-template-columns: repeat(3, 500px);
-    justify-items: center;
-    grid-gap: 10px 0px;
-}
-
 .images {
     width: 400px;
-    height: 350px;
+    height: 200px;
 }
-
-.main{
+.game-intro{
     display: flex;
+    justify-content: flex-start;
+    margin-top:10px;
+    margin-bottom: 20px;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
 }
