@@ -62,36 +62,35 @@ const Section = () => {
         clicked: false
     }];
 
-    const [card, setCardInfo] = useState(city);
+    const [cardInfo, setCardInfo] = useState(city);
     const [score, setScore] = useState(0);
-    const [bestScore, setBestScore] = useState(0);
+    let [bestScore, setBestScore] = useState(0);
 
-    const handleClick = (e) => {
-        // e.preventDefault();
-        const cardShuffled = shuffle(card)
+    const handleClick = (id) => {
+        const cardShuffled = shuffle(cardInfo)
         setCardInfo(cardShuffled);
-        // handleScore(id)
+        handleScore(cardShuffled, id)
     }
 
-    // const handleScore = (id) =>{
-    //     let element = card.filter((card)=> card.id === id);
-    //     if(element && element.clicked === false){
-    //         element.clicked = true;
-    //         setCard({...card, clicked: false});
-    //         handleIncrement();
-    //     }else if(element && element.clicked === true){
-    //         if(score > bestScore){
-    //             setBestScore(score);
-    //         }
-    //         setScore(0);
-    //         setCard({...card, clicked: true});
-    //         card.forEach((card)=> card.clicked = false);
-    //         console.log(card);
-    //     }
-    // }
-    // const handleIncrement = () => {
-    //     setScore(score + 1);
-    // }
+    const handleScore = (cardShuffled, id) => {
+        let element = cardShuffled.filter((card) => card.id === id);
+        console.log(element);
+        element.forEach((e) => {
+            if (e.clicked === false) {
+                e.clicked = true;
+                handleIncrement();
+            } else if (e.clicked === true) {
+                if (score > bestScore) {
+                    bestScore = score;
+                    setBestScore(bestScore);
+                }
+                setScore(0);
+            }
+        });
+    }
+    const handleIncrement = () => {
+        setScore(score + 1);
+    }
 
     const shuffle = (card) => {
         let resultArray = [];
@@ -113,7 +112,7 @@ const Section = () => {
                 <h3>Get points by Clicking on an image but don't click on any more than Once!</h3>
             </div>
             <div className="main">
-                <Card card={card} handleClick={handleClick} clicked={card.clicked} />
+                <Card card={cardInfo} handleClick={handleClick} clicked={cardInfo.clicked} />
             </div>
         </div>
     )
