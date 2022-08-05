@@ -12,8 +12,8 @@ import russia from "../main-assets/images/a-l.jpg";
 import southbank from "../main-assets/images/marcus-clark.jpg";
 import london from "../main-assets/images/christopher-burns.jpg";
 import "../main-assets/style/card.css";
-const Section = () => {
 
+const Section = () => {
     let city = [{
         src: japan,
         id: uniqid(),
@@ -66,8 +66,9 @@ const Section = () => {
     const [score, setScore] = useState(0);
     let [bestScore, setBestScore] = useState(0);
 
+
     const handleClick = (id) => {
-        const cardShuffled = shuffle(cardInfo)
+        let cardShuffled = shuffleCard(cardInfo)
         setCardInfo(cardShuffled);
         handleScore(cardShuffled, id)
     }
@@ -75,24 +76,31 @@ const Section = () => {
     const handleScore = (cardShuffled, id) => {
         let element = cardShuffled.filter((card) => card.id === id);
         console.log(element);
-        element.forEach((e) => {
-            if (e.clicked === false) {
-                e.clicked = true;
+        element.forEach((card) => {
+            if (card.clicked === false) {
+                card.clicked = true;
                 handleIncrement();
-            } else if (e.clicked === true) {
+            } else if (card.clicked === true) {
                 if (score > bestScore) {
                     bestScore = score;
                     setBestScore(bestScore);
+                    console.log(card);
                 }
                 setScore(0);
+                handleReset(cardShuffled);
             }
+        });
+    }
+    const handleReset = (cardShuffled) => {
+        cardShuffled.forEach((card) => {
+            card.clicked = false;
         });
     }
     const handleIncrement = () => {
         setScore(score + 1);
     }
 
-    const shuffle = (card) => {
+    const shuffleCard = (card) => {
         let resultArray = [];
         while (card.length > 0) {
             let randomIndex = Math.floor(Math.random() * card.length);
@@ -109,10 +117,10 @@ const Section = () => {
                 <Header score={score} bestScore={bestScore} />
             </div>
             <div className="game-intro">
-                <h3>Get points by Clicking on an image but don't click on any more than Once!</h3>
+                <h4>Get points by Clicking on an image but don't click on any more than Once!</h4>
             </div>
             <div className="main">
-                <Card card={cardInfo} handleClick={handleClick} clicked={cardInfo.clicked} />
+                <Card card={cardInfo} handleClick={handleClick} />
             </div>
         </div>
     )
