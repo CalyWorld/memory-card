@@ -1,4 +1,4 @@
-import './assets/style/App.css';
+import './assets/App.css';
 import Section from './components/main/card/section';
 
 function App() {
