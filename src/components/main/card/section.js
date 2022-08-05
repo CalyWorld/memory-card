@@ -65,6 +65,7 @@ const Section = () => {
     const [cardInfo, setCardInfo] = useState(city);
     const [score, setScore] = useState(0);
     let [bestScore, setBestScore] = useState(0);
+   
 
 
     const handleClick = (id) => {
@@ -75,7 +76,6 @@ const Section = () => {
 
     const handleScore = (cardShuffled, id) => {
         let element = cardShuffled.filter((card) => card.id === id);
-        console.log(element);
         element.forEach((card) => {
             if (card.clicked === false) {
                 card.clicked = true;
@@ -84,14 +84,13 @@ const Section = () => {
                 if (score > bestScore) {
                     bestScore = score;
                     setBestScore(bestScore);
-                    console.log(card);
                 }
                 setScore(0);
-                handleReset(cardShuffled);
+                handleGameReset(cardShuffled);
             }
         });
     }
-    const handleReset = (cardShuffled) => {
+    const handleGameReset = (cardShuffled) => {
         cardShuffled.forEach((card) => {
             card.clicked = false;
         });
@@ -112,7 +111,7 @@ const Section = () => {
     }
 
     return (
-        <div>
+        <div className="full-card">
             <div className="header">
                 <Header score={score} bestScore={bestScore} />
             </div>

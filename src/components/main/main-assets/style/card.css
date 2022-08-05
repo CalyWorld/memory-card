@@ -1,7 +1,11 @@
 .images {
     width: 400px;
-    height: 200px;
+    height: 250px;
 }
+.images:hover{
+    box-shadow: -1px 2px 25px 5px rgba(232,228,228);
+}
+
 .game-intro{
     display: flex;
     justify-content: flex-start;
@@ -13,6 +17,45 @@
     grid-template-columns: repeat(3, 400px);
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     padding: 5px;
+}
+
+@media only screen 
+  and (max-device-width: 480px)
+   {
+
+    .full-card{
+        width: 440px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 440px;
+    }
+    .score-container{
+        width: 195px;
+    }
+    .header-container{
+        display: flex;
+        gap: 20px;
+    }
+   
+    .title-container{
+        display: flex;
+        justify-content: center;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+    }
+    .images {
+        width: 200px;
+        height: 200px;
+    }
+    .game-intro{
+        width: 440px;
+    }
 }

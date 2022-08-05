@@ -1,7 +1,7 @@
 import React from "react";
 import '../header/header.css';
 const Header = (props) => {
-    const {score} = props;
+    const {score, bestScore} = props;
     return (
         <div className="header-container">
             <div className="title-container">
@@ -12,7 +12,7 @@ const Header = (props) => {
                     <h3>Score: {score}</h3>
                 </div>
                 <div className="best-score">
-                    <h3>Best score: 0</h3>
+                    <h3>Best score: {bestScore}</h3>
                 </div>
             </div>
         </div>

@@ -1,18 +1,11 @@
-*{
-  box-sizing: border-box;
-  outline: 1px solid red;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
 }
 
 .App {
-  text-align: center;
-  margin: 20px;
+    text-align: center;
+    margin: 20px;
 }
-
-
-
-
-
-
-
