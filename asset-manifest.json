@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.d0e746e1.css",
-    "main.js": "/react-gh-pages/static/js/main.d8bba129.js",
-    "static/media/christopher-burns.jpg": "/react-gh-pages/static/media/christopher-burns.26ddcf75ba7922068258.jpg",
-    "static/media/denys-nevozhai.jpg": "/react-gh-pages/static/media/denys-nevozhai.fc9b53dbd16df4b6363d.jpg",
-    "static/media/marcus-clark.jpg": "/react-gh-pages/static/media/marcus-clark.e8c85ca808561216e20a.jpg",
-    "static/media/dylan-freedom.jpg": "/react-gh-pages/static/media/dylan-freedom.4e4bca23611f98eac93d.jpg",
-    "static/media/a-l.jpg": "/react-gh-pages/static/media/a-l.d48493ab29102730330d.jpg",
-    "static/media/micael-widell.jpg": "/react-gh-pages/static/media/micael-widell.fb26bae826b2439a6726.jpg",
-    "static/media/geziel-esteban.jpg": "/react-gh-pages/static/media/geziel-esteban.b6c900aef64c3129fb1b.jpg",
-    "static/media/daniel-zacatenco.jpg": "/react-gh-pages/static/media/daniel-zacatenco.e66e8be0a5207d11798f.jpg",
-    "static/media/jase-bloor.jpg": "/react-gh-pages/static/media/jase-bloor.395b61d20d0d4d836c45.jpg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.d0e746e1.css.map": "/react-gh-pages/static/css/main.d0e746e1.css.map",
-    "main.d8bba129.js.map": "/react-gh-pages/static/js/main.d8bba129.js.map"
+    "main.css": "/memory-card/static/css/main.d0e746e1.css",
+    "main.js": "/memory-card/static/js/main.f48cd34d.js",
+    "static/media/christopher-burns.jpg": "/memory-card/static/media/christopher-burns.26ddcf75ba7922068258.jpg",
+    "static/media/denys-nevozhai.jpg": "/memory-card/static/media/denys-nevozhai.fc9b53dbd16df4b6363d.jpg",
+    "static/media/marcus-clark.jpg": "/memory-card/static/media/marcus-clark.e8c85ca808561216e20a.jpg",
+    "static/media/dylan-freedom.jpg": "/memory-card/static/media/dylan-freedom.4e4bca23611f98eac93d.jpg",
+    "static/media/a-l.jpg": "/memory-card/static/media/a-l.d48493ab29102730330d.jpg",
+    "static/media/micael-widell.jpg": "/memory-card/static/media/micael-widell.fb26bae826b2439a6726.jpg",
+    "static/media/geziel-esteban.jpg": "/memory-card/static/media/geziel-esteban.b6c900aef64c3129fb1b.jpg",
+    "static/media/daniel-zacatenco.jpg": "/memory-card/static/media/daniel-zacatenco.e66e8be0a5207d11798f.jpg",
+    "static/media/jase-bloor.jpg": "/memory-card/static/media/jase-bloor.395b61d20d0d4d836c45.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.d0e746e1.css.map": "/memory-card/static/css/main.d0e746e1.css.map",
+    "main.f48cd34d.js.map": "/memory-card/static/js/main.f48cd34d.js.map"
   },
   "entrypoints": [
     "static/css/main.d0e746e1.css",
-    "static/js/main.d8bba129.js",
-    "static/media"
+    "static/js/main.f48cd34d.js"
   ]
 }
